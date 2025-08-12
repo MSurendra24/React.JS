@@ -1,17 +1,23 @@
-import react from 'react';
-class Message extends react.Component {
-    msg="Hello, World!";
-    getHandler=()=>{
-        this.msg="Hello";
-
+import React from "react";
+class Message extends React.Component{
+    state={
+        qty:1
     }
-    render() {
-    return (
-    <div>
-        <h1>Hello, World!</h1>
-        <button onClick={this.getHandler}>Change Message</button>
-    </div>
-    );
+    incrHandler = ()=>{
+        this.setState({qty:this.state.qty+1})
+    }
+    decrHandler = ()=>{
+        this.setState({qty:this.state.qty-1})
+    }
+    render(){
+        console.log("Test Case 123")
+        return <div>
+                    <h4>Product Component</h4>
+                    <button onClick={this.decrHandler}>-</button>
+                    <h4>Product Qty:{this.state.qty}</h4>
+                    
+                    <button onClick={this.incrHandler}>+</button>
+                </div>
     }
 }
 export default Message;

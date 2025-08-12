@@ -1,9 +1,9 @@
-import Message from './Message/Message'
+import Message from "./Messages/Message";
 let App =()=>{
 
     return <div>
             <h3>App Component</h3>
-            <hr/>
+            <hr />
             <Message/>
             </div>
 }
