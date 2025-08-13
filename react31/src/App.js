@@ -1,10 +1,8 @@
-import Message from './Message/Message'
-let App =()=>{
+import React from 'react';
 
-    return <div>
-            <h3>App Component</h3>
-            <hr/>
-            <Message/>
-            </div>
+    function App(){
+        console.log("App Component Rendered");
+        <h3>App Component</h3>;
+
 }
 export default App;
